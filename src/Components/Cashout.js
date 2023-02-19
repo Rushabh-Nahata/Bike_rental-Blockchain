@@ -68,10 +68,11 @@ export const Cashout = (props) => {
     async function sendTransaction(){
         let params=[{
               "from": "0x72298658d5bf27B2Fa610CB5F18E4bcA1A9Eef9a",
-              "to": "0xA45D8aAa81b0Eb8b137eb54B3581C719441A680a",
-              "gas": Number(21000).toString(16), // 30400
-              "gasPrice": Number(25000).toString(16), // 10000000000000
-              "value": Number(1200000000000000).toString(16), // 2441406250
+              "to": //{userAddress}
+                       "0xA45D8aAa81b0Eb8b137eb54B3581C719441A680a",
+              "gas": Number(21000).toString(16), 
+              "gasPrice": Number(25).toString(16), 
+              "value": Number(1200000000000000).toString(16), 
             }]
       window.ethereum.request({ method:"eth_sendTransaction",params}).catch((err) => {
         console.log("Errror Ocurred");
